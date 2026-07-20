@@ -2,18 +2,16 @@
 
 ## Contents
 
-- [`docs/illion-integration-flow.md`](docs/illion-integration-flow.md) — Part
-  2: authentication and the linking/request-response workflow with illion
+- [`docs/illion-integration-flow.md`](docs/illion-integration-flow.md): authentication and the linking/request-response workflow with illion
   (institution selection, credentials, MFA, async retrieval, polling
   fallback).
-- [`docs/data-processing-and-storing.md`](docs/data-processing-and-storing.md)
-  — Part 2: what happens once illion's webhook lands — verification,
+- [`docs/data-processing-and-storing.md`](docs/data-processing-and-storing.md): what happens once illion's webhook lands — verification,
   normalisation, idempotent storage, failure handling, security, and how
   results become available to the rest of the system.
-- [`docs/schema.md`](docs/schema.md) — Part 2: the data models/schema
+- [`docs/schema.md`](docs/schema.md): the data models/schema
   (`User`, `BankConnection`, `Account`, `Transaction`, `StatementMetrics`,
   ...) and their relationships.
-- [`bin/bank_analysis.rb`](bin/bank_analysis.rb) — Part 3: entry point that
+- [`bin/bank_analysis.rb`](bin/bank_analysis.rb): entry point that
   loads the sample statement data and prints the report.
 - [`lib/bankfeed_insights/`](lib/bankfeed_insights) — the actual
   implementation, one file per concern:
