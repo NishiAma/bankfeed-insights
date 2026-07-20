@@ -1,0 +1,8 @@
+/.bundle/
+/vendor/bundle/
+*.gem
+
+/spec/reports/
+.rspec_status
+
+.DS_Store
