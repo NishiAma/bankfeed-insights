@@ -2,6 +2,8 @@
 
 ## Contents
 
+- [`docs/overview.md`](docs/overview.md): a single end-to-end sequence
+  diagram tying the two workflow docs below together — start here.
 - [`docs/illion-integration-flow.md`](docs/illion-integration-flow.md): authentication and the linking/request-response workflow with illion
   (institution selection, credentials, MFA, async retrieval, polling
   fallback).
