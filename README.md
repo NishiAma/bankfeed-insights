@@ -61,3 +61,17 @@ bundle exec rspec
    real-world signal for a lending risk engine and is well represented in
    the sample data.
 
+**Note on the raw payload:** each account's `statementData` also carries
+illion's own pre-computed `analysis` (categorised + per-payee breakdowns,
+including a far larger lender/gambling-operator taxonomy than the keyword
+list here) and `dayEndBalances`/`minDayEndBalance`/`maxDayEndBalance`
+(so "highest/lowest daily closing balance" needs no calculation at all —
+it's already a field). The calculators here deliberately re-derive
+classification from transaction text instead of reading `analysis`
+directly, as a decoupling exercise consistent with normalising into our
+own schema rather than trusting a specific provider's shape long-term. In
+practice, the stronger design is a hybrid: prefer illion's `analysis`/
+`tags` where present (broader, provider-maintained coverage — note even
+illion falls back to an untagged `Loans.Generic` bucket), and use
+keyword matching only to fill gaps it leaves.
+
